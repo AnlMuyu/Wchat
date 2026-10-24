@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>主页</title>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="layout">
+  <!-- 左侧：动态 -->
+  <div class="col">
+    <h3>动态</h3>
+    <textarea id="moment" placeholder="说点什么..."></textarea>
+    <button onclick="postMoment()">发布</button>
+    <div id="moments"></div>
+  </div>
+
+  <!-- 右侧：聊天 -->
+  <div class="col">
+    <h3>私聊</h3>
+    <input id="toUser" placeholder="对方用户名">
+    <div id="chat" class="chat"></div>
+    <input id="msg" placeholder="输入消息">
+    <button onclick="send()">发送</button>
+    <a href="profile.html">个人主页</a>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
